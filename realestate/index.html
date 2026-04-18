@@ -3,29 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>陳建宏 · 安家房產 - 雙北買賣屋首選</title>
+<title>王柏翔 · 柏翔房產 - 雙北買賣屋首選</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Noto Sans TC',sans-serif;color:#333;overflow-x:hidden}
 ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-thumb{background:#1a5276;border-radius:3px}
-
 nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;transition:all .4s}
 nav.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(20px);box-shadow:0 2px 20px rgba(0,0,0,.08)}
 .nav-logo{font-weight:900;font-size:1.3em;color:#fff}nav.scrolled .nav-logo{color:#1a5276}
 nav a{color:rgba(255,255,255,.8);text-decoration:none;margin-left:30px;font-size:.9em;transition:color .3s}nav.scrolled nav a{color:#555}nav a:hover{color:#e74c3c}
-
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px;background:linear-gradient(135deg,rgba(26,82,118,.92),rgba(41,128,185,.88)),url('https://picsum.photos/seed/taipei-building/1600/900') center/cover;color:#fff;position:relative}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px;background:linear-gradient(135deg,rgba(26,82,118,.92),rgba(41,128,185,.88)),url('https://images.pexels.com/photos/14180110/pexels-photo-14180110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') center/cover;color:#fff;position:relative}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(transparent,#fff)}
 .hero-content{max-width:700px;z-index:1}
 .hero h1{font-size:clamp(2.2em,5vw,3.5em);font-weight:900;margin-bottom:15px;line-height:1.2}
 .hero p{font-size:1.15em;opacity:.9;margin-bottom:40px;line-height:1.8}
 .cta{display:inline-block;background:#fff;color:#1a5276;padding:16px 45px;border-radius:50px;text-decoration:none;font-weight:700;font-size:1.05em;transition:all .3s;box-shadow:0 10px 30px rgba(0,0,0,.15)}
 .cta:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(0,0,0,.2)}
-
 section{padding:100px 20px;max-width:1100px;margin:0 auto}
 .sh{text-align:center;margin-bottom:60px}.sh h2{font-size:2.2em;font-weight:900;color:#1a5276;margin-bottom:12px}.sh p{color:#888;font-size:1.05em}
-
 .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px}
 .svc{background:#fff;padding:35px 28px;border-radius:16px;border:1px solid #eee;transition:all .4s;position:relative;overflow:hidden}
 .svc::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#1a5276,#2980b9)}
@@ -33,11 +29,9 @@ section{padding:100px 20px;max-width:1100px;margin:0 auto}
 .svc .icon{font-size:2.2em;margin-bottom:18px}
 .svc h3{font-size:1.15em;margin-bottom:10px;color:#1a5276}
 .svc p{color:#777;font-size:.92em;line-height:1.7}
-
 .stats{background:linear-gradient(135deg,#1a5276,#2980b9);padding:80px 20px;color:#fff}
 .stats-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
 .stat-num{font-size:2.8em;font-weight:900}.stat-label{font-size:.9em;opacity:.8;margin-top:8px}
-
 .listings{padding:100px 20px;max-width:1100px;margin:0 auto}
 .listing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px}
 .listing{border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 5px 25px rgba(0,0,0,.06);transition:all .4s}
@@ -48,7 +42,6 @@ section{padding:100px 20px;max-width:1100px;margin:0 auto}
 .listing-addr{color:#888;font-size:.9em;margin-bottom:12px}
 .listing-tags{display:flex;gap:8px;flex-wrap:wrap}
 .listing-tags span{background:#f0f4f8;padding:4px 12px;border-radius:20px;font-size:.8em;color:#1a5276}
-
 .testimonials{background:#f8f9fa;padding:100px 20px}
 .test-inner{max-width:800px;margin:0 auto}
 .test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:25px}
@@ -58,7 +51,6 @@ section{padding:100px 20px;max-width:1100px;margin:0 auto}
 .test-author{display:flex;align-items:center;gap:12px}
 .test-avatar{width:45px;height:45px;border-radius:50%;background:linear-gradient(135deg,#1a5276,#2980b9);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
 .test-name{font-weight:700;color:#1a5276}.test-role{font-size:.8em;color:#999}
-
 .contact{background:linear-gradient(135deg,#1a5276,#2980b9);padding:100px 20px;color:#fff;text-align:center}
 .contact h2{font-size:2.2em;margin-bottom:15px}
 .contact p{opacity:.85;margin-bottom:35px;font-size:1.05em}
@@ -66,24 +58,18 @@ section{padding:100px 20px;max-width:1100px;margin:0 auto}
 .contact-btn{padding:15px 35px;border-radius:50px;text-decoration:none;font-weight:600;font-size:1em;transition:all .3s}
 .btn-white{background:#fff;color:#1a5276}.btn-white:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.2)}
 .btn-outline{border:2px solid #fff;color:#fff}.btn-outline:hover{background:rgba(255,255,255,.15)}
-
 .map-section{padding:0}.map-section iframe{width:100%;height:350px;border:0;filter:grayscale(.5)}
-
 footer{text-align:center;padding:40px;background:#111;color:#666;font-size:.85em}footer a{color:#2980b9;text-decoration:none}
-
 .reveal{opacity:0;transform:translateY(35px);transition:all .7s cubic-bezier(.25,.46,.45,.94)}.reveal.visible{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
-
 @media(max-width:768px){.stats-inner{grid-template-columns:repeat(2,1fr)}.listing-grid,.test-grid{grid-template-columns:1fr}nav{padding:15px 20px}nav a{margin-left:15px}}
 </style>
 </head>
 <body>
-
 <nav id="nav">
-  <div class="nav-logo">🏠 陳建宏 · 安家房產</div>
+  <div class="nav-logo">🏠 王柏翔 · 柏翔房產</div>
   <div><a href="#services">服務項目</a><a href="#listings">精選物件</a><a href="#reviews">客戶見證</a><a href="#contact">聯絡我</a></div>
 </nav>
-
 <div class="hero">
   <div class="hero-content">
     <h1>深耕雙北15年<br>幫你找到理想的家</h1>
@@ -91,7 +77,6 @@ footer{text-align:center;padding:40px;background:#111;color:#666;font-size:.85em
     <a href="tel:0912-345-678" class="cta">📞 立即預約免費諮詢</a>
   </div>
 </div>
-
 <section id="services">
   <div class="sh reveal"><h2>服務項目</h2><p>從找房到交屋，全程陪伴</p></div>
   <div class="services-grid">
@@ -101,7 +86,6 @@ footer{text-align:center;padding:40px;background:#111;color:#666;font-size:.85em
     <div class="svc reveal d4"><div class="icon">🔑</div><h3>租賃服務</h3><p>住宅與商辦租賃，快速媒合優質租客，穩定收租</p></div>
   </div>
 </section>
-
 <div class="stats reveal">
   <div class="stats-inner">
     <div><div class="stat-num">15</div><div class="stat-label">年經驗</div></div>
@@ -110,28 +94,24 @@ footer{text-align:center;padding:40px;background:#111;color:#666;font-size:.85em
     <div><div class="stat-num">7天</div><div class="stat-label">平均成交天數</div></div>
   </div>
 </div>
-
 <section class="listings" id="listings">
   <div class="sh reveal"><h2>精選物件</h2><p>每週更新，搶手好房不錯過</p></div>
   <div class="listing-grid">
-    <div class="listing reveal d1"><img src="https://picsum.photos/seed/apt1/600/400" alt=""><div class="listing-info"><div class="listing-price">1,280萬</div><div class="listing-addr">📍 大安區 · 3房2廳 · 32坪</div><div class="listing-tags"><span>近捷運</span><span>學區</span><span>車位</span></div></div></div>
-    <div class="listing reveal d2"><img src="https://picsum.photos/seed/apt2/600/400" alt=""><div class="listing-info"><div class="listing-price">860萬</div><div class="listing-addr">📍 中山區 · 2房1廳 · 21坪</div><div class="listing-tags"><span>新裝潢</span><span>近商圈</span></div></div></div>
-    <div class="listing reveal d3"><img src="https://picsum.photos/seed/apt3/600/400" alt=""><div class="listing-info"><div class="listing-price">2,380萬</div><div class="listing-addr">📍 信義區 · 4房2廳 · 48坪</div><div class="listing-tags"><span>豪宅</span><span>景觀</span><span>車位</span></div></div></div>
+    <div class="listing reveal d1"><img src="https://images.pexels.com/photos/5563473/pexels-photo-5563473.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="精選物件"><div class="listing-info"><div class="listing-price">1,280萬</div><div class="listing-addr">📍 大安區 · 3房2廳 · 32坪</div><div class="listing-tags"><span>近捷運</span><span>學區</span><span>車位</span></div></div></div>
+    <div class="listing reveal d2"><img src="https://images.pexels.com/photos/14964569/pexels-photo-14964569.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="精選物件"><div class="listing-info"><div class="listing-price">860萬</div><div class="listing-addr">📍 中山區 · 2房1廳 · 21坪</div><div class="listing-tags"><span>新裝潢</span><span>近商圈</span></div></div></div>
+    <div class="listing reveal d3"><img src="https://images.pexels.com/photos/8082330/pexels-photo-8082330.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="精選物件"><div class="listing-info"><div class="listing-price">2,380萬</div><div class="listing-addr">📍 信義區 · 4房2廳 · 48坪</div><div class="listing-tags"><span>豪宅</span><span>景觀</span><span>車位</span></div></div></div>
   </div>
 </section>
-
 <section class="testimonials" id="reviews">
   <div class="test-inner">
-    <div class="sh reveal"><h2>客戶怎麼說</h2><p>真實回饋，最有說服力</p></div>
+    <div class="sh reveal"><h2>客戶怎麼說</h2><p>回饋與口碑，是最有力的推薦</p></div>
     <div class="test-grid">
-      <div class="test reveal d1"><p>第一次買房完全不懂，陳經紀人超有耐心，從看房到貸款全程陪同，三個月就找到理想的房子，非常推薦！</p><div class="test-author"><div class="test-avatar">張</div><div><div class="test-name">張小姐</div><div class="test-role">大安區買方 · 2025</div></div></div></div>
-      <div class="test reveal d2"><p>原本以為房子很難賣，結果陳先生一週內就帶了五組客人來看，兩週成交，價格比預期還高了50萬！</p><div class="test-author"><div class="test-avatar">林</div><div><div class="test-name">林先生</div><div class="test-role">中山區賣方 · 2025</div></div></div></div>
+      <div class="test reveal d1"><p>第一次買房完全不懂，王經紀人超有耐心，從看房到貸款全程陪同，三個月就找到理想的房子，非常推薦！</p><div class="test-author"><div class="test-avatar">趙</div><div><div class="test-name">趙太太</div><div class="test-role">大安區買方 · 2025</div></div></div></div>
+      <div class="test reveal d2"><p>原本以為房子很難賣，結果王先生一週內就帶了五組客人來看，兩週成交，價格比預期還高了50萬！</p><div class="test-author"><div class="test-avatar">錢</div><div><div class="test-name">錢先生</div><div class="test-role">中山區賣方 · 2025</div></div></div></div>
     </div>
   </div>
 </section>
-
 <div class="map-section"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14459.496575694724!2d121.54!3d25.03!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAyJzAwLjAiTiAxMjHCsDMyJzI0LjAiRQ!5e0!3m2!1szh-TW!2stw!4v1" loading="lazy"></iframe></div>
-
 <div class="contact" id="contact">
   <h2>預約免費諮詢</h2>
   <p>不論買屋、賣屋、租屋，都可以先聊聊</p>
@@ -140,9 +120,7 @@ footer{text-align:center;padding:40px;background:#111;color:#666;font-size:.85em
     <a href="https://line.me/ti/p/G1rRvflCQE" class="contact-btn btn-outline">💬 LINE 諮詢</a>
   </div>
 </div>
-
-<footer>© 2026 陳建宏 · 安家房產 · <a href="../">網站由本事多媒體製作</a></footer>
-
+<footer>© 2026 王柏翔 · 柏翔房產 · <a href="../">網站由本事多媒體製作</a></footer>
 <script>
 window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50)});
 const obs=new IntersectionObserver(e=>{e.forEach(i=>{if(i.isIntersecting){i.target.classList.add('visible');obs.unobserve(i.target)}})},{threshold:.12});

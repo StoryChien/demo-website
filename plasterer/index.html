@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>李阿土 · 阿土師泥作 - 雙北泥作工程</title>
+<title>洪萬福 · 福師泥作 - 雙北泥作工程</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -13,34 +13,28 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 40px;display:flex;j
 nav.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(20px);box-shadow:0 2px 20px rgba(0,0,0,.08)}
 .nav-logo{font-weight:900;font-size:1.3em;color:#fff}nav.scrolled .nav-logo{color:#555}
 nav a{color:rgba(255,255,255,.8);text-decoration:none;margin-left:30px;font-size:.9em}nav.scrolled nav a{color:#555}
-
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px;background:linear-gradient(135deg,rgba(85,85,85,.93),rgba(119,119,119,.88)),url('https://picsum.photos/seed/brick-wall/1600/900') center/cover;color:#fff;position:relative}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px;background:linear-gradient(135deg,rgba(85,85,85,.93),rgba(119,119,119,.88)),url('https://images.pexels.com/photos/7394220/pexels-photo-7394220.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') center/cover;color:#fff;position:relative}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(transparent,#fff)}
 .hero-content{max-width:700px;z-index:1}
 .hero h1{font-size:clamp(2.2em,5vw,3.5em);font-weight:900;margin-bottom:15px}
 .hero p{font-size:1.15em;opacity:.9;margin-bottom:40px;line-height:1.8}
 .cta{display:inline-block;background:#fff;color:#555;padding:16px 45px;border-radius:50px;text-decoration:none;font-weight:700;font-size:1.05em;transition:all .3s;box-shadow:0 10px 30px rgba(0,0,0,.15)}
 .cta:hover{transform:translateY(-3px)}
-
 section{padding:100px 20px;max-width:1100px;margin:0 auto}
 .sh{text-align:center;margin-bottom:60px}.sh h2{font-size:2.2em;font-weight:900;color:#555;margin-bottom:12px}.sh p{color:#999}
-
 .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px}
 .svc{background:#fff;padding:35px 28px;border-radius:16px;border:1px solid #eee;transition:all .4s}
 .svc:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,.06)}
 .svc .icon{font-size:2.2em;margin-bottom:18px}.svc h3{font-size:1.15em;margin-bottom:10px;color:#555}.svc p{color:#777;font-size:.92em;line-height:1.7}
-
 .stats{background:#555;padding:80px 20px;color:#fff}
 .stats-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
 .stat-num{font-size:2.8em;font-weight:900}.stat-label{font-size:.9em;opacity:.8;margin-top:8px}
-
 .gallery{padding:100px 20px;max-width:1100px;margin:0 auto}
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
 .gallery-item{border-radius:12px;overflow:hidden;position:relative;aspect-ratio:4/3}
 .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .gallery-item:hover img{transform:scale(1.08)}
 .gallery-item .tag{position:absolute;bottom:12px;left:12px;background:rgba(85,85,85,.9);color:#fff;padding:5px 14px;border-radius:20px;font-size:.8em}
-
 .trust{background:#f5f5f5;padding:100px 20px}
 .trust-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
 .trust h2{font-size:2em;font-weight:900;color:#555;margin-bottom:15px}
@@ -49,21 +43,18 @@ section{padding:100px 20px;max-width:1100px;margin:0 auto}
 .tp{display:flex;gap:15px;align-items:flex-start}
 .tp-icon{width:45px;height:45px;background:#555;color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2em;flex-shrink:0}
 .tp h4{font-weight:700;color:#555;margin-bottom:4px}.tp p{color:#999;font-size:.88em}
-
 .testimonials{background:#333;padding:100px 20px;color:#fff}
 .test-inner{max-width:800px;margin:0 auto}
 .test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:25px}
 .test{background:#3a3a3a;padding:30px;border-radius:16px;border-left:3px solid #bbb}
 .test p{color:#bbb;line-height:1.8;margin-bottom:15px;font-style:italic}
 .test-name{font-weight:700;color:#fff}.test-role{font-size:.8em;color:#888}
-
 .contact{background:#555;padding:100px 20px;color:#fff;text-align:center}
 .contact h2{font-size:2.2em;margin-bottom:15px}.contact p{opacity:.85;margin-bottom:35px}
 .contact-btns{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
 .contact-btn{padding:15px 35px;border-radius:50px;text-decoration:none;font-weight:600;transition:all .3s}
 .btn-white{background:#fff;color:#555}.btn-white:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.2)}
 .btn-outline{border:2px solid #fff;color:#fff}.btn-outline:hover{background:rgba(255,255,255,.15)}
-
 footer{text-align:center;padding:40px;background:#222;color:#666;font-size:.85em}footer a{color:#999;text-decoration:none}
 .reveal{opacity:0;transform:translateY(35px);transition:all .7s cubic-bezier(.25,.46,.45,.94)}.reveal.visible{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
@@ -71,15 +62,13 @@ footer{text-align:center;padding:40px;background:#222;color:#666;font-size:.85em
 </style>
 </head>
 <body>
-<nav id="nav"><div class="nav-logo">🧱 阿土師泥作</div><div><a href="#services">服務</a><a href="#gallery">作品</a><a href="#reviews">評價</a><a href="#contact">聯絡</a></div></nav>
-
+<nav id="nav"><div class="nav-logo">🧱 福師泥作</div><div><a href="#services">服務</a><a href="#gallery">作品</a><a href="#reviews">評價</a><a href="#contact">聯絡</a></div></nav>
 <div class="hero"><div class="hero-content">
   <h1>30年老師傅<br>一磚一瓦都是功夫</h1>
   <p>地壁磚、防水、粉光、砌磚<br>做得好、收得細、打掃乾淨再走</p>
   <a href="tel:0933-444-555" class="cta">📞 免費到場估價</a>
 </div></div>
-
-<section id="services"><div class="sh reveal"><h2>服務項目</h2><p>泥作大小事，找阿土師就對了</p></div>
+<section id="services"><div class="sh reveal"><h2>服務項目</h2><p>泥作大小事，找福師就對了</p></div>
 <div class="services-grid">
   <div class="svc reveal d1"><div class="icon">🧱</div><h3>地壁磚施作</h3><p>磁磚、石材、抿石子，對花對縫，整齊漂亮</p></div>
   <div class="svc reveal d2"><div class="icon">💧</div><h3>防水工程</h3><p>陽台、浴室、屋頂防水，一勞永逸不漏水</p></div>
@@ -88,25 +77,22 @@ footer{text-align:center;padding:40px;background:#222;color:#666;font-size:.85em
   <div class="svc reveal d1"><div class="icon">🚿</div><h3>浴室翻新</h3><p>老舊浴室打掉重做，防水+磁磚一站搞定</p></div>
   <div class="svc reveal d2"><div class="icon">🏠</div><h3>外牆修繕</h3><p>外牆磁磚剝落、龜裂修補，安全第一</p></div>
 </div></section>
-
 <div class="stats reveal"><div class="stats-inner">
   <div><div class="stat-num">30</div><div class="stat-label">年經驗</div></div>
   <div><div class="stat-num">2000+</div><div class="stat-label">完工案場</div></div>
   <div><div class="stat-num">0</div><div class="stat-label">重大客訴</div></div>
   <div><div class="stat-num">5年</div><div class="stat-label">防水保固</div></div>
 </div></div>
-
 <section class="gallery" id="gallery"><div class="sh reveal"><h2>施工作品</h2><p>做好不怕你看</p></div>
 <div class="gallery-grid">
-  <div class="gallery-item reveal d1"><img src="https://picsum.photos/seed/tile1/500/400" alt=""><span class="tag">浴室磁磚</span></div>
-  <div class="gallery-item reveal d2"><img src="https://picsum.photos/seed/tile2/500/400" alt=""><span class="tag">客廳地磚</span></div>
-  <div class="gallery-item reveal d3"><img src="https://picsum.photos/seed/wall-fix/500/400" alt=""><span class="tag">外牆修繕</span></div>
-  <div class="gallery-item reveal d1"><img src="https://picsum.photos/seed/waterproof/500/400" alt=""><span class="tag">防水施作</span></div>
+  <div class="gallery-item reveal d1"><img src="https://images.pexels.com/photos/19980232/pexels-photo-19980232.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt=""><span class="tag">浴室磁磚</span></div>
+  <div class="gallery-item reveal d2"><img src="https://images.pexels.com/photos/19688828/pexels-photo-19688828.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt=""><span class="tag">客廳地磚</span></div>
+  <div class="gallery-item reveal d3"><img src="https://images.pexels.com/photos/35149473/pexels-photo-35149473.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt=""><span class="tag">外牆修繕</span></div>
+  <div class="gallery-item reveal d1"><img src="https://images.pexels.com/photos/7394220/pexels-photo-7394220.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt=""><span class="tag">防水施作</span></div>
 </div></section>
-
 <section class="trust">
   <div class="trust-inner">
-    <div class="reveal"><h2>為什麼找阿土師？</h2><p>泥作是裝修的基礎，做好了後面都順，做不好整間都是問題。30年來我只堅持一件事——把每一個案場當自己家來做。</p></div>
+    <div class="reveal"><h2>為什麼找福師？</h2><p>泥作是裝修的基礎，做好了後面都順，做不好整間都是問題。30年來我只堅持一件事——把每一個案場當自己家來做。</p></div>
     <div class="trust-points">
       <div class="tp reveal d1"><div class="tp-icon">📋</div><div><h4>報價透明</h4><p>免費到場評估，報價單白紙黑字，不追加不偷工</p></div></div>
       <div class="tp reveal d2"><div class="tp-icon">🧹</div><div><h4>施工乾淨</h4><p>每天收工前清掃，垃圾帶走，不給鄰居添麻煩</p></div></div>
@@ -114,19 +100,16 @@ footer{text-align:center;padding:40px;background:#222;color:#666;font-size:.85em
     </div>
   </div>
 </section>
-
 <section class="testimonials" id="reviews"><div class="test-inner">
   <div class="sh reveal"><h2 style="color:#fff">客戶怎麼說</h2><p style="color:#888">做好口碑，靠的是每一個案場</p></div>
   <div class="test-grid">
-    <div class="test reveal d1"><p>阿土師傅做事超級仔細，磁磚切得整整齊齊，連工頭都稱讚。而且每天收工都把工地掃乾淨，真的很少見。</p><div class="test-name">張先生</div><div class="test-role">板橋區 · 浴室翻新</div></div>
-    <div class="test reveal d2"><p>陽台漏水漏了三年，找過兩個師傅都修不好，阿土師一次搞定，到現在兩年了一滴水都沒漏過。</p><div class="test-name">林太太</div><div class="test-role">新店區 · 防水工程</div></div>
+    <div class="test reveal d1"><p>福師傅做事超級仔細，磁磚切得整整齊齊，連工頭都稱讚。而且每天收工都把工地掃乾淨，真的很少見。</p><div class="test-name">謝先生</div><div class="test-role">板橋區 · 浴室翻新</div></div>
+    <div class="test reveal d2"><p>陽台漏水漏了三年，找過兩個師傅都修不好，福師一次搞定，到現在兩年了一滴水都沒漏過。</p><div class="test-name">陳太太</div><div class="test-role">新店區 · 防水工程</div></div>
   </div>
 </div></section>
-
 <div class="contact" id="contact"><h2>免費到場估價</h2><p>打個電話聊聊，不收費、不推銷</p>
 <div class="contact-btns"><a href="tel:0933-444-555" class="contact-btn btn-white">📞 0933-444-555</a><a href="https://line.me/ti/p/G1rRvflCQE" class="contact-btn btn-outline">💬 LINE 諮詢</a></div></div>
-
-<footer>© 2026 阿土師泥作 · 雙北地區 · <a href="../">網站由本事多媒體製作</a></footer>
+<footer>© 2026 福師泥作 · 雙北地區 · <a href="../">網站由本事多媒體製作</a></footer>
 <script>
 window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50)});
 const obs=new IntersectionObserver(e=>{e.forEach(i=>{if(i.isIntersecting){i.target.classList.add('visible');obs.unobserve(i.target)}})},{threshold:.12});
