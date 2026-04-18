@@ -3,62 +3,116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>林柏翰 · B-FIT 私人健身 - 一對一專業體態雕塑</title>
+<title>林柏翰 · 翰動 FITNESS - 雙北私人教練</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Microsoft JhengHei','PingFang TC',sans-serif;color:#333;line-height:1.7}
-:root{--c1:#c0392b;--c2:#e74c3c}
-.hero{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;padding:100px 20px;text-align:center}
-.hero h1{font-size:2.5em;margin-bottom:10px}
-.hero p{font-size:1.2em;opacity:.9;max-width:600px;margin:0 auto 30px}
-.hero .cta{display:inline-block;background:#fff;color:var(--c1);padding:15px 40px;border-radius:50px;text-decoration:none;font-weight:bold;font-size:1.1em;transition:transform .2s}
-.hero .cta:hover{transform:scale(1.05)}
-section{padding:80px 20px;max-width:1000px;margin:0 auto}
-.section-title{text-align:center;font-size:1.8em;margin-bottom:40px;color:var(--c1)}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
-.service-card{background:#f8f9fa;padding:30px;border-radius:12px;border-left:4px solid var(--c2);transition:transform .2s}
-.service-card:hover{transform:translateY(-5px)}
-.service-card h3{color:var(--c1);margin-bottom:10px}
-.about{background:#f8f9fa;text-align:center;padding:80px 20px}
-.about p{max-width:700px;margin:0 auto;font-size:1.1em;color:#555}
-.contact{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;text-align:center;padding:80px 20px}
-.contact h2{margin-bottom:20px}
-.contact a{color:#fff;font-size:1.3em;text-decoration:none;display:inline-block;margin:10px;padding:12px 30px;border:2px solid #fff;border-radius:50px;transition:background .2s}
-.contact a:hover{background:rgba(255,255,255,.2)}
-footer{text-align:center;padding:30px;background:#222;color:#888;font-size:.9em}
-@media(max-width:768px){.hero h1{font-size:1.8em}.services{grid-template-columns:1fr}}
+body{font-family:'Noto Sans TC',sans-serif;color:#333;overflow-x:hidden}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-thumb{background:#e74c3c;border-radius:3px}
+nav{position:fixed;top:0;width:100%;z-index:100;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;transition:all .4s}
+nav.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(20px);box-shadow:0 2px 20px rgba(0,0,0,.08)}
+.nav-logo{font-weight:900;font-size:1.3em;color:#fff}nav.scrolled .nav-logo{color:#c0392b}
+nav a{color:rgba(255,255,255,.8);text-decoration:none;margin-left:30px;font-size:.9em;transition:color .3s}nav.scrolled nav a{color:#555}
+
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px;background:linear-gradient(135deg,rgba(192,57,43,.9),rgba(231,76,60,.85)),url('https://picsum.photos/seed/gym-dark/1600/900') center/cover;color:#fff;position:relative}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(transparent,#fff)}
+.hero-content{max-width:700px;z-index:1}
+.hero h1{font-size:clamp(2.2em,5vw,3.8em);font-weight:900;margin-bottom:15px;line-height:1.15}
+.hero p{font-size:1.15em;opacity:.9;margin-bottom:40px;line-height:1.8}
+.cta{display:inline-block;background:#fff;color:#c0392b;padding:16px 45px;border-radius:50px;text-decoration:none;font-weight:700;font-size:1.05em;transition:all .3s;box-shadow:0 10px 30px rgba(0,0,0,.15)}
+.cta:hover{transform:translateY(-3px)}
+section{padding:100px 20px;max-width:1100px;margin:0 auto}
+.sh{text-align:center;margin-bottom:60px}.sh h2{font-size:2.2em;font-weight:900;color:#c0392b;margin-bottom:12px}.sh p{color:#888}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px}
+.svc{background:#fff;padding:35px 28px;border-radius:16px;border:1px solid #eee;transition:all .4s}
+.svc:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(192,57,43,.1);border-color:transparent}
+.svc .icon{font-size:2.2em;margin-bottom:18px}.svc h3{font-size:1.15em;margin-bottom:10px;color:#c0392b}.svc p{color:#777;font-size:.92em;line-height:1.7}
+.pricing{background:#f8f9fa;padding:100px 20px}
+.price-inner{max-width:900px;margin:0 auto}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+.price-card{background:#fff;border-radius:16px;padding:40px 30px;text-align:center;border:2px solid #eee;transition:all .4s}
+.price-card.popular{border-color:#c0392b;position:relative}
+.price-card.popular::before{content:'最熱門';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#c0392b;color:#fff;padding:4px 18px;border-radius:20px;font-size:.8em;font-weight:700}
+.price-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,.08)}
+.price-card h3{font-size:1.3em;color:#c0392b;margin-bottom:10px}
+.price-amount{font-size:2.5em;font-weight:900;color:#333;margin:15px 0}
+.price-amount span{font-size:.4em;color:#999;font-weight:400}
+.price-card ul{list-style:none;text-align:left;margin:20px 0}
+.price-card li{padding:8px 0;color:#666;font-size:.9em;border-bottom:1px solid #f0f0f0}
+.price-card li::before{content:'✓ ';color:#27ae60;font-weight:700}
+.transform{padding:100px 20px;max-width:1100px;margin:0 auto}
+.tf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+.tf-card{border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 5px 25px rgba(0,0,0,.06)}
+.tf-card img{width:100%;height:220px;object-fit:cover}
+.tf-info{padding:22px}.tf-info h4{color:#c0392b;margin-bottom:8px}.tf-info p{color:#888;font-size:.9em;line-height:1.7}
+.testimonials{background:#1a1a1a;padding:100px 20px;color:#fff}
+.test-inner{max-width:800px;margin:0 auto}
+.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:25px}
+.test{background:#222;padding:30px;border-radius:16px;position:relative}
+.test::before{content:'"';position:absolute;top:15px;right:25px;font-size:4em;color:#333;font-family:Georgia}
+.test p{color:#aaa;line-height:1.8;margin-bottom:15px;font-style:italic}
+.test-name{font-weight:700;color:#e74c3c}.test-role{font-size:.8em;color:#666}
+.contact{background:linear-gradient(135deg,#c0392b,#e74c3c);padding:100px 20px;color:#fff;text-align:center}
+.contact h2{font-size:2.2em;margin-bottom:15px}.contact p{opacity:.85;margin-bottom:35px}
+.contact-btns{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.contact-btn{padding:15px 35px;border-radius:50px;text-decoration:none;font-weight:600;transition:all .3s}
+.btn-white{background:#fff;color:#c0392b}.btn-white:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.btn-outline{border:2px solid #fff;color:#fff}.btn-outline:hover{background:rgba(255,255,255,.15)}
+footer{text-align:center;padding:40px;background:#111;color:#666;font-size:.85em}footer a{color:#e74c3c;text-decoration:none}
+.reveal{opacity:0;transform:translateY(35px);transition:all .7s cubic-bezier(.25,.46,.45,.94)}.reveal.visible{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+@media(max-width:768px){.price-grid,.test-grid,.tf-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+<nav id="nav"><div class="nav-logo">💪 翰動 FITNESS</div><div><a href="#services">服務</a><a href="#pricing">方案</a><a href="#results">成果</a><a href="#contact">預約</a></div></nav>
 
-<div class="hero">
-  <h1>林柏翰 · B-FIT 私人健身</h1>
-  <p>量身打造訓練計畫，讓你看到不一樣的自己</p>
-  <a href="tel:0987-654-321" class="cta">📞 立即預約諮詢</a>
-</div>
+<div class="hero"><div class="hero-content">
+  <h1>你的身體<br>值得更好的對待</h1>
+  <p>一對一私人教練課，量身打造訓練計畫<br>不管你想減脂、增肌、還是找回健康，我幫你做到</p>
+  <a href="tel:0987-654-321" class="cta">🔥 免費體驗課預約</a>
+</div></div>
 
-<section>
-  <h2 class="section-title">服務項目</h2>
-  <div class="services">
-    <div class="service-card"><h3>💪 一對一訓練</h3><p>根據你的體態目標，設計專屬訓練菜單，全程指導動作</p></div><div class="service-card"><h3>🥗 飲食規劃</h3><p>搭配營養建議，讓訓練效果最大化</p></div><div class="service-card"><h3>📈 體態追蹤</h3><p>每月InBody測量，數據化呈現你的進步</p></div><div class="service-card"><h3>🧘 產後修復</h3><p>針對產後媽媽設計的溫和修復訓練</p></div>
+<section id="services"><div class="sh reveal"><h2>訓練項目</h2><p>每種目標都有對應的專業課程</p></div>
+<div class="services-grid">
+  <div class="svc reveal d1"><div class="icon">🔥</div><h3>減脂瘦身</h3><p>科學化飲食規劃＋高效燃脂訓練，健康瘦下來不復胖</p></div>
+  <div class="svc reveal d2"><div class="icon">💪</div><h3>增肌塑形</h3><p>漸進式超負荷訓練，打造理想肌肉線條</p></div>
+  <div class="svc reveal d3"><div class="icon">🧘</div><h3>體態矯正</h3><p>改善圓肩、骨盆前傾，讓你站得直、走得美</p></div>
+  <div class="svc reveal d3"><div class="icon">🏃</div><h3>運動表現</h3><p>針對馬拉松、球類運動的專項體能訓練</p></div>
+</div></section>
+
+<section class="pricing" id="pricing"><div class="price-inner">
+  <div class="sh reveal"><h2>訓練方案</h2><p>透明價格，沒有隱藏費用</p></div>
+  <div class="price-grid">
+    <div class="price-card reveal d1"><h3>體驗方案</h3><div class="price-amount">$1,500<span>/堂</span></div><ul><li>60分鐘一對一教學</li><li>體適能檢測</li><li>基礎訓練計畫</li></ul></div>
+    <div class="price-card popular reveal d2"><h3>標準方案</h3><div class="price-amount">$12,800<span>/10堂</span></div><ul><li>每堂省$220</li><li>完整體態分析</li><li>客製化課表</li><li>飲食建議追蹤</li></ul></div>
+    <div class="price-card reveal d3"><h3>全方位方案</h3><div class="price-amount">$36,000<span>/3個月</span></div><ul><li>無限次數訓練</li><li>每週營養諮詢</li><li>體態攝影紀錄</li><li>LINE 隨時答疑</li></ul></div>
   </div>
-</section>
+</div></section>
 
-<div class="about">
-  <h2 class="section-title">關於我們</h2>
-  <p>林柏翰教練，NSCA-CSCS 認證，8年教學經驗。曾協助超過200位學員達成體態目標。專精減脂增肌、體態雕塑、運動傷害預防。服務據點：台北市大安區。</p>
-</div>
+<section class="transform" id="results"><div class="sh reveal"><h2>學員成果</h2><p>真實案例，沒有修圖</p></div>
+<div class="tf-grid">
+  <div class="tf-card reveal d1"><img src="https://picsum.photos/seed/fit1/600/400" alt=""><div class="tf-info"><h4>小王 · 3個月減脂</h4><p>從 95kg → 78kg，體脂從 32% → 18%。最大的改變不只是體重，是整個人的精氣神都不一樣了。</p></div></div>
+  <div class="tf-card reveal d2"><img src="https://picsum.photos/seed/fit2/600/400" alt=""><div class="tf-info"><h4>阿美 · 體態矯正</h4><p>長期久坐圓肩嚴重，經過 2 個月矯正訓練，同事都說我變高了（其實只是站直了）。</p></div></div>
+  <div class="tf-card reveal d3"><img src="https://picsum.photos/seed/fit3/600/400" alt=""><div class="tf-info"><h4>陳大哥 · 50歲回春</h4><p>醫生說再不運動就要吃藥了，現在血壓正常，膝蓋也不痛了，每天早上公園跑步。</p></div></div>
+</div></section>
 
-<div class="contact">
-  <h2>聯絡我們</h2>
-  <p style="margin-bottom:20px">服務地區：雙北市 · 免費到府估價</p>
-  <a href="tel:0987-654-321">📞 0987-654-321</a>
-  <a href="https://line.me/ti/p/G1rRvflCQE">💬 LINE 諮詢</a>
-</div>
+<section class="testimonials"><div class="test-inner">
+  <div class="sh reveal"><h2 style="color:#fff">學員怎麼說</h2><p style="color:#666">每一個回饋都是真實的</p></div>
+  <div class="test-grid">
+    <div class="test reveal d1"><p>柏翰教練很專業也很有耐心，會根據你的身體狀況調整訓練強度，不會硬操你，但效果真的出來了。</p><div class="test-name">周小姐</div><div class="test-role">訓練6個月</div></div>
+    <div class="test reveal d2"><p>之前去過好幾間健身房，都沒辦法堅持下來。來翰動之後第一次覺得運動是開心的，現在已經訓練一年了。</p><div class="test-name">吳先生</div><div class="test-role">訓練12個月</div></div>
+  </div>
+</div></section>
 
-<footer>
-  © 2026 林柏翰 · B-FIT 私人健身 · 雙北地區專業服務 · 網站由本事多媒體製作
-</footer>
+<div class="contact" id="contact"><h2>預約免費體驗課</h2><p>一個小時，讓你感受不一樣的訓練</p>
+<div class="contact-btns"><a href="tel:0987-654-321" class="contact-btn btn-white">📞 0987-654-321</a><a href="https://line.me/ti/p/G1rRvflCQE" class="contact-btn btn-outline">💬 LINE 預約</a></div></div>
 
+<footer>© 2026 翰動 FITNESS · 雙北地區 · <a href="../">網站由本事多媒體製作</a></footer>
+<script>
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50)});
+const obs=new IntersectionObserver(e=>{e.forEach(i=>{if(i.isIntersecting){i.target.classList.add('visible');obs.unobserve(i.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
 </body>
 </html>

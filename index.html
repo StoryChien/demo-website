@@ -3,100 +3,174 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>本事多媒體 — 作品集</title>
+<title>本事多媒體 — 網頁設計作品集</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Microsoft JhengHei','PingFang TC',sans-serif;background:#0a0a0a;color:#fff}
-.hero{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#1a1a2e,#16213e)}
-.hero h1{font-size:2.5em;margin-bottom:10px;background:linear-gradient(90deg,#e94560,#0f3460);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{color:#aaa;font-size:1.1em}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;max-width:1100px;margin:0 auto;padding:50px 20px}
-.card{background:#1a1a2e;border-radius:16px;overflow:hidden;transition:transform .3s,box-shadow .3s;text-decoration:none;color:#fff}
-.card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(233,69,96,.2)}
-.card-icon{font-size:3em;padding:30px;text-align:center;background:#16213e}
+body{font-family:'Noto Sans TC',sans-serif;background:#080808;color:#fff;overflow-x:hidden}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-thumb{background:#e94560;border-radius:3px}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(8,8,8,.85);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.05)}
+.logo{font-weight:900;font-size:1.3em;letter-spacing:-1px}
+.logo span{color:#e94560}
+nav a{color:#aaa;text-decoration:none;margin-left:30px;font-size:.9em;transition:color .3s}
+nav a:hover{color:#e94560}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 20px 80px;background:radial-gradient(ellipse at 50% 0%,#1a0a2e 0%,#080808 70%)}
+.hero-badge{display:inline-block;padding:8px 20px;border:1px solid rgba(233,69,96,.4);border-radius:50px;font-size:.85em;color:#e94560;margin-bottom:30px;letter-spacing:2px;text-transform:uppercase}
+.hero h1{font-size:clamp(2.5em,6vw,4.5em);font-weight:900;line-height:1.1;margin-bottom:20px}
+.hero h1 .gradient{background:linear-gradient(135deg,#e94560,#f5a623);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:#888;font-size:1.2em;max-width:600px;margin-bottom:50px;line-height:1.8}
+.hero-stats{display:flex;gap:60px;margin-top:20px}
+.stat{text-align:center}
+.stat-num{font-size:2.5em;font-weight:900;color:#e94560}
+.stat-label{font-size:.85em;color:#666;margin-top:5px}
+
+/* DEMO GRID */
+.demos{padding:100px 20px;max-width:1200px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:60px}
+.section-header h2{font-size:2.5em;font-weight:900;margin-bottom:15px}
+.section-header p{color:#666;font-size:1.1em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:30px}
+.card{background:#111;border-radius:16px;overflow:hidden;border:1px solid #1a1a1a;transition:all .4s cubic-bezier(.25,.46,.45,.94);cursor:pointer;text-decoration:none;color:#fff;display:block}
+.card:hover{transform:translateY(-10px);border-color:#e94560;box-shadow:0 20px 60px rgba(233,69,96,.15)}
+.card-img{height:220px;position:relative;overflow:hidden}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .card-img img{transform:scale(1.08)}
+.card-overlay{position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,.8));display:flex;align-items:flex-end;padding:25px}
+.card-tag{background:rgba(233,69,96,.9);padding:5px 14px;border-radius:20px;font-size:.75em;font-weight:700;letter-spacing:1px}
 .card-body{padding:25px}
-.card-body h3{font-size:1.3em;margin-bottom:8px;color:#e94560}
-.card-body p{color:#aaa;font-size:.95em;line-height:1.6}
-.card-body .tag{display:inline-block;background:#e9456020;color:#e94560;padding:4px 12px;border-radius:20px;font-size:.8em;margin-top:12px}
-.cta-section{text-align:center;padding:60px 20px;background:linear-gradient(135deg,#e94560,#0f3460)}
-.cta-section h2{font-size:2em;margin-bottom:15px}
-.cta-section p{margin-bottom:25px;opacity:.9}
-.cta-section a{display:inline-block;background:#fff;color:#e94560;padding:15px 40px;border-radius:50px;text-decoration:none;font-weight:bold;font-size:1.1em}
-footer{text-align:center;padding:30px;background:#111;color:#666;font-size:.85em}
+.card-body h3{font-size:1.3em;margin-bottom:10px;font-weight:700}
+.card-body p{color:#888;font-size:.9em;line-height:1.6}
+.card-footer{padding:0 25px 25px;display:flex;align-items:center;gap:10px;color:#e94560;font-size:.9em;font-weight:500}
+
+/* WHY ME */
+.why{padding:100px 20px;background:#0d0d0d}
+.why-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why h2{font-size:2.2em;font-weight:900;margin-bottom:20px}
+.why>p,.why-inner>p{color:#888;line-height:1.8;font-size:1.05em}
+.features{display:flex;flex-direction:column;gap:25px}
+.feature{display:flex;gap:20px;align-items:flex-start}
+.feature-icon{width:50px;height:50px;background:linear-gradient(135deg,#e94560,#f5a623);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4em;flex-shrink:0}
+.feature h4{font-weight:700;margin-bottom:5px}
+.feature p{color:#888;font-size:.9em}
+
+/* CTA */
+.cta-section{padding:120px 20px;text-align:center;background:radial-gradient(ellipse at 50% 100%,#1a0a2e 0%,#080808 70%)}
+.cta-section h2{font-size:2.5em;font-weight:900;margin-bottom:20px}
+.cta-section p{color:#888;margin-bottom:40px;font-size:1.1em}
+.cta-btn{display:inline-block;padding:18px 50px;background:linear-gradient(135deg,#e94560,#c0392b);color:#fff;text-decoration:none;border-radius:50px;font-weight:700;font-size:1.1em;transition:all .3s;box-shadow:0 10px 40px rgba(233,69,96,.3)}
+.cta-btn:hover{transform:translateY(-3px);box-shadow:0 15px 50px rgba(233,69,96,.4)}
+
+footer{text-align:center;padding:40px;border-top:1px solid #1a1a1a;color:#444;font-size:.85em}
+
+/* ANIMATIONS */
+.reveal{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.25,.46,.45,.94)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}
+
+@media(max-width:768px){
+  .why-inner{grid-template-columns:1fr}
+  .hero-stats{gap:30px}
+  .grid{grid-template-columns:1fr}
+  nav{padding:15px 20px}
+  nav a{margin-left:15px;font-size:.8em}
+}
 </style>
 </head>
 <body>
 
+<nav>
+  <div class="logo">Be<span>Seen</span></div>
+  <div><a href="#demos">作品集</a><a href="#why">為什麼選我</a><a href="#contact">聯絡我</a></div>
+</nav>
+
 <div class="hero">
-  <h1>本事多媒體 BeSeen</h1>
-  <p>我們做的網站，不只好看，更帶來客戶</p>
+  <div class="hero-badge">🌐 網頁設計 × 品牌經營</div>
+  <h1>讓你的生意<br><span class="gradient">在網路上被看見</span></h1>
+  <p>專為雙北傳統產業打造的現代化官網<br>不用花大錢，不用等三個月，一個禮拜上線</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">7天</div><div class="stat-label">快速交付</div></div>
+    <div class="stat"><div class="stat-num">$8,800</div><div class="stat-label">起</div></div>
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-label">RWD 手機友善</div></div>
+  </div>
 </div>
 
-<div class="grid">
-  <a class="card" href="./realestate/">
-    <div class="card-icon">🏠</div>
-    <div class="card-body">
-      <h3>房仲經紀人</h3>
-      <p>專業形象官網，展示物件與服務，讓客戶主動找上門</p>
-      <span class="tag">房地產</span>
+<section class="demos" id="demos">
+  <div class="section-header reveal">
+    <h2>真實作品預覽</h2>
+    <p>每個行業都有專屬設計風格，點擊查看完整 demo</p>
+  </div>
+  <div class="grid">
+    <a href="realestate/" class="card reveal reveal-delay-1">
+      <div class="card-img"><img src="https://picsum.photos/seed/house1/800/500" alt="房仲"><div class="card-overlay"><span class="card-tag">房地產</span></div></div>
+      <div class="card-body"><h3>🏠 陳建宏 · 安家房產</h3><p>深耕雙北15年，專業買賣屋服務，精準市場分析</p></div>
+      <div class="card-footer">查看完整 demo →</div>
+    </a>
+    <a href="trainer/" class="card reveal reveal-delay-2">
+      <div class="card-img"><img src="https://picsum.photos/seed/fitness1/800/500" alt="健身"><div class="card-overlay"><span class="card-tag">健身教練</span></div></div>
+      <div class="card-body"><h3>💪 林柏翰 · 翰動 FITNESS</h3><p>一對一私人教練課，打造你的理想體態</p></div>
+      <div class="card-footer">查看完整 demo →</div>
+    </a>
+    <a href="interior/" class="card reveal reveal-delay-3">
+      <div class="card-img"><img src="https://picsum.photos/seed/interior1/800/500" alt="室內設計"><div class="card-overlay"><span class="card-tag">室內設計</span></div></div>
+      <div class="card-body"><h3>🎨 張雅筑 · 筑空間設計</h3><p>從毛胚到入住，打造屬於你的質感空間</p></div>
+      <div class="card-footer">查看完整 demo →</div>
+    </a>
+    <a href="plumber/" class="card reveal reveal-delay-1">
+      <div class="card-img"><img src="https://picsum.photos/seed/pipe1/800/500" alt="水電"><div class="card-overlay"><span class="card-tag">水電工程</span></div></div>
+      <div class="card-body"><h3>🔧 王大明 · 大明水電</h3><p>雙北24小時到府服務，老屋翻修專精</p></div>
+      <div class="card-footer">查看完整 demo →</div>
+    </a>
+    <a href="plasterer/" class="card reveal reveal-delay-2">
+      <div class="card-img"><img src="https://picsum.photos/seed/wall1/800/500" alt="泥作"><div class="card-overlay"><span class="card-tag">泥作工程</span></div></div>
+      <div class="card-body"><h3>🧱 李阿土 · 阿土師泥作</h3><p>30年老師傅，一磚一瓦都是功夫</p></div>
+      <div class="card-footer">查看完整 demo →</div>
+    </a>
+    <a href="painter/" class="card reveal reveal-delay-3">
+      <div class="card-img"><img src="https://picsum.photos/seed/paint1/800/500" alt="油漆"><div class="card-overlay"><span class="card-tag">油漆工程</span></div></div>
+      <div class="card-body"><h3>🎨 黃美麗 · 美麗油漆</h3><p>藝術塗裝、舊屋換新，讓空間煥然一新</p></div>
+      <div class="card-footer">查看完整 demo →</div>
+    </a>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="reveal">
+      <h2>為什麼傳統產業<br>需要一個好網站？</h2>
+      <p style="margin-top:20px">90% 的客戶在 Google 上搜尋服務時，<br>第一眼看到的就是你的網站。<br>一個專業的官網 = 24小時不休息的業務員。</p>
     </div>
-  </a>
-
-  <a class="card" href="./trainer/">
-    <div class="card-icon">💪</div>
-    <div class="card-body">
-      <h3>健身教練</h3>
-      <p>個人品牌網站，課程展示、學員見證，打造專業形象</p>
-      <span class="tag">健身</span>
+    <div class="features">
+      <div class="feature reveal reveal-delay-1"><div class="feature-icon">🔍</div><div><h4>Google 搜得到</h4><p>SEO 優化，客戶搜「雙北水電」第一個看到你</p></div></div>
+      <div class="feature reveal reveal-delay-2"><div class="feature-icon">📱</div><div><h4>手機看到都美</h4><p>100% 響應式設計，任何裝置都好看</p></div></div>
+      <div class="feature reveal reveal-delay-3"><div class="feature-icon">⚡</div><div><h4>載入速度超快</h4><p>3 秒內開啟，不讓客戶等太久</p></div></div>
+      <div class="feature reveal reveal-delay-4"><div class="feature-icon">💰</div><div><h4>超值價格</h4><p>$8,800 起，比一個月廣告費還便宜</p></div></div>
     </div>
-  </a>
+  </div>
+</section>
 
-  <a class="card" href="./interior/">
-    <div class="card-icon">🎨</div>
-    <div class="card-body">
-      <h3>室內設計</h3>
-      <p>作品集網站，風格展示、案例分享，吸引高端客戶</p>
-      <span class="tag">設計</span>
-    </div>
-  </a>
+<section class="cta-section" id="contact">
+  <div class="reveal">
+    <h2>準備好讓你的生意<br><span style="color:#e94560">在網路上起飛了嗎？</span></h2>
+    <p>加我 LINE 聊聊，免費評估不收費</p>
+    <a href="https://line.me/ti/p/G1rRvflCQE" class="cta-btn">💬 加 LINE 諮詢</a>
+    <p style="margin-top:20px;color:#555;font-size:.9em">或直接打電話：0912-345-678</p>
+  </div>
+</section>
 
-  <a class="card" href="./plumber/">
-    <div class="card-icon">🔧</div>
-    <div class="card-body">
-      <h3>水電工程</h3>
-      <p>在地服務官網，服務項目清楚、電話一鍵撥打</p>
-      <span class="tag">工程</span>
-    </div>
-  </a>
+<footer>© 2026 本事多媒體 BeSeen Multimedia · 雙北地區專業網頁設計服務</footer>
 
-  <a class="card" href="./plasterer/">
-    <div class="card-icon">🧱</div>
-    <div class="card-body">
-      <h3>泥作工程</h3>
-      <p>傳統工藝加上現代網站，展現專業與信任感</p>
-      <span class="tag">工程</span>
-    </div>
-  </a>
-
-  <a class="card" href="./painter/">
-    <div class="card-icon">🖌️</div>
-    <div class="card-body">
-      <h3>油漆工程</h3>
-      <p>服務範圍、案例展示、線上估價，一頁搞定</p>
-      <span class="tag">工程</span>
-    </div>
-  </a>
-</div>
-
-<div class="cta-section">
-  <h2>你的行業也能擁有專業網站</h2>
-  <p>一頁式形象官網 · 手機版適配 · SEO 優化 · 7天交件</p>
-  <a href="https://line.me/ti/p/G1rRvflCQE">💬 免費諮詢</a>
-</div>
-
-<footer>
-  © 2026 本事多媒體 BeSeen Multimedia · 所有 demo 僅為展示用途
-</footer>
-
+<script>
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
 </body>
 </html>
